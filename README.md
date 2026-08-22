@@ -2,6 +2,41 @@
 
 This project now includes end-to-end emergency alerting, live camera analysis, sensor ingestion, and cloud-ready event storage.
 
+## Tech Stack
+
+- Backend: Python (Flask/FastAPI compatible), common data-science libraries for model inference
+- Models: YOLOv8 for detection, EfficientNet-based classifier for scene classification
+- Frontend: React + Vite, Tailwind CSS (optional), Leaflet / Google Maps for mapping
+- Realtime: WebSockets / SSE for live feed and updates
+- Database: PostgreSQL (recommended) or SQLite for local/dev
+- Storage: AWS S3 or GCP Cloud Storage (cloud-abstracted)
+- Messaging/Notifications: Twilio for SMS, webhook relay for mobile/FCM
+- Containerization & Deployment: Docker, Kubernetes (optional), CI/CD pipelines
+
+## Project structure
+
+- backend/
+  - app.py (backend entrypoint)
+  - requirements.txt
+  - .venv/ (created by launcher)
+  - uploads/ (event logs, image uploads)
+  - models/ (YOLO/EfficientNet weights and model artifacts)
+  - api/ (API route handlers)
+  - services/ (alerting, cloud storage adapters, sensor ingestion)
+
+- frontend/
+  - package.json
+  - src/ (React app source)
+  - public/ (static assets)
+  - .env (Vite env file for API keys)
+
+- scripts/
+  - start.bat / run scripts and VS Code tasks
+
+- docs/ (optional documentation and design notes)
+
+> Note: This is a recommended structure — some files or folders may be named differently in the repository. Adjust names when integrating.
+
 ## One-Click Run (Recommended)
 
 Use either:
