@@ -1,0 +1,21 @@
+{
+  "architecture": "efficientnet_b0",
+  "num_classes": 2,
+  "classes": [
+    "no_fire",
+    "fire"
+  ],
+  "class_to_idx": {
+    "no_fire": 0,
+    "fire": 1
+  },
+  "img_size": 224,
+  "seed": 42,
+  "best_val_acc": 100.0,
+  "dataset_root": "C:\\Users\\rohit\\Downloads\\FireWatch-AI-main\\FireWatch-AI-main\\dataset",
+  "split": {
+    "train": 8,
+    "val": 2,
+    "test": 2
+  }
+}

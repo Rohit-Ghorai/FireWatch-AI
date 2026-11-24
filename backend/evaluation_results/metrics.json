@@ -1,0 +1,112 @@
+{
+  "evaluation_date": "2026-11-18T13:42:34.160054+00:00",
+  "dataset": {
+    "root": "C:\\Users\\rohit\\Downloads\\FireWatch-AI-main\\FireWatch-AI-main\\dataset",
+    "total_images": 12,
+    "class_distribution": {
+      "no_fire": 7,
+      "fire": 5
+    },
+    "test_set_size": 2,
+    "split_seed": 42,
+    "validation_errors": []
+  },
+  "model_audit": {
+    "efficientnet": {
+      "architecture": "EfficientNet-B0 (binary fire/no_fire head)",
+      "weights_path": "efficientnet_fire_best.pth",
+      "weight_status": "custom_fire_weights",
+      "can_detect_fire": true,
+      "evaluation_status": "EVALUATED"
+    },
+    "yolov8": {
+      "architecture": "YOLOv8n",
+      "weights_path": "yolov8n.pt",
+      "weight_status": "coco_generic_weights",
+      "has_fire_classes": false,
+      "can_detect_fire": false,
+      "evaluation_status": "NOT_EVALUATED"
+    },
+    "cnn_lstm": {
+      "architecture": "EfficientNet-B0 CNN + LSTM (seq_length=5)",
+      "weights_path": "cnn_lstm_best.pth",
+      "weight_status": "random_weights",
+      "can_detect_fire": false,
+      "evaluation_status": "NOT_EVALUATED",
+      "note": "CNN-LSTM requires temporal sequences of frames from the same scene. Still-image datasets cannot substitute for genuine temporal sequences."
+    },
+    "heuristic": {
+      "architecture": "Color-histogram + brightness + texture heuristic",
+      "weights_path": "N/A",
+      "weight_status": "rule_based",
+      "can_detect_fire": true,
+      "evaluation_status": "EVALUATED",
+      "note": "Heuristic scores are rule-based thresholds, NOT model accuracy."
+    }
+  },
+  "metrics": {
+    "efficientnet": {
+      "model": "EfficientNet-B0",
+      "n_test_samples": 2,
+      "n_fire_samples": 1,
+      "n_no_fire_samples": 1,
+      "accuracy": 0.5,
+      "precision_fire": 0.0,
+      "recall_fire": 0.0,
+      "f1_fire": 0.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": {
+        "labels": [
+          "no_fire",
+          "fire"
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "note": "rows=actual, cols=predicted"
+      },
+      "classification_report_text": "              precision    recall  f1-score   support\n\n     no_fire       0.50      1.00      0.67         1\n        fire       0.00      0.00      0.00         1\n\n    accuracy                           0.50         2\n   macro avg       0.25      0.50      0.33         2\nweighted avg       0.25      0.50      0.33         2\n"
+    },
+    "heuristic": {
+      "model": "Heuristic",
+      "n_test_samples": 2,
+      "n_fire_samples": 1,
+      "n_no_fire_samples": 1,
+      "accuracy": 1.0,
+      "precision_fire": 1.0,
+      "recall_fire": 1.0,
+      "f1_fire": 1.0,
+      "roc_auc": "N/A",
+      "confusion_matrix": {
+        "labels": [
+          "no_fire",
+          "fire"
+        ],
+        "matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "note": "rows=actual, cols=predicted"
+      },
+      "classification_report_text": "              precision    recall  f1-score   support\n\n     no_fire       1.00      1.00      1.00         1\n        fire       1.00      1.00      1.00         1\n\n    accuracy                           1.00         2\n   macro avg       1.00      1.00      1.00         2\nweighted avg       1.00      1.00      1.00         2\n",
+      "note": "Heuristic rule-based classifier. Scores are computed from color statistics, not learned from data. Must be compared against model-based classifiers separately."
+    }
+  },
+  "not_evaluated": [
+    "YOLOv8: yolov8n.pt uses 80 generic COCO classes \u2014 'fire' and 'smoke' are NOT present. It cannot detect fire. NOT EVALUATED.",
+    "CNN-LSTM: random_weights. Must be trained with train_cnn_lstm.py using genuine temporal sequence data."
+  ]
+}

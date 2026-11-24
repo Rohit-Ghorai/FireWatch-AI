@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-18T13:39:23.521731+00:00",
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "counts": {
+    "total": 12,
+    "train": 8,
+    "val": 2,
+    "test": 2
+  },
+  "class_distribution": {
+    "train": {
+      "fire": 3,
+      "no_fire": 5
+    },
+    "val": {
+      "fire": 1,
+      "no_fire": 1
+    },
+    "test": {
+      "fire": 1,
+      "no_fire": 1
+    }
+  },
+  "train_files": [
+    "fire\\forest-fire-blaze-stockcake.webp",
+    "fire\\images (1).jpg",
+    "fire\\download.jpg",
+    "no_fire\\green-forest-2131948.webp",
+    "no_fire\\Belovezhskaya-Forest-Poland.webp",
+    "no_fire\\images (3).jpg",
+    "no_fire\\pexels-hikaique-775201.jpg",
+    "no_fire\\download (1).jpg"
+  ],
+  "val_files": [
+    "fire\\fire-fighters-at-forest-fire-c-quarrie-photography.tmb-479v.jpg",
+    "no_fire\\green-forest-aerial-view-photo.jpeg"
+  ],
+  "test_files": [
+    "fire\\Forest-fire-trees-grasses.webp",
+    "no_fire\\images (2).jpg"
+  ],
+  "test_indices": [
+    4,
+    10
+  ],
+  "val_indices": [
+    3,
+    8
+  ],
+  "train_indices": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7,
+    9,
+    11
+  ],
+  "dataset_root": "C:\\Users\\rohit\\Downloads\\FireWatch-AI-main\\FireWatch-AI-main\\dataset"
+}

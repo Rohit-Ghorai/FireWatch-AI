@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-11-18T13:45:00Z",
+  "description": "Ground-truth annotations and category definitions for FireWatch-AI Robustness Testing Suite",
+  "categories": {
+    "smoke_no_fire": {
+      "ground_truth_label": "no_fire",
+      "ground_truth_int": 0,
+      "challenge_type": "false_positive_susceptibility",
+      "description": "Dense smoke plumes without visible open flames (testing whether smoke triggers false fire alarm)"
+    },
+    "autumn_foliage": {
+      "ground_truth_label": "no_fire",
+      "ground_truth_int": 0,
+      "challenge_type": "false_positive_susceptibility",
+      "description": "Yellow, orange, and red autumn forest canopies (testing color-histogram false positives)"
+    },
+    "orange_sunsets": {
+      "ground_truth_label": "no_fire",
+      "ground_truth_int": 0,
+      "challenge_type": "false_positive_susceptibility",
+      "description": "Golden-hour sunsets and sunrises behind forest horizons mimicking wildfire glow"
+    },
+    "industrial_smoke": {
+      "ground_truth_label": "no_fire",
+      "ground_truth_int": 0,
+      "challenge_type": "false_positive_susceptibility",
+      "description": "Factory chimneys, cooling tower steam, and industrial plumes mimicking wildfires"
+    },
+    "campfires": {
+      "ground_truth_label": "fire",
+      "ground_truth_int": 1,
+      "challenge_type": "false_negative_susceptibility",
+      "description": "Small-scale contained fires, campfires, or controlled burns in forested settings"
+    },
+    "forest_fires": {
+      "ground_truth_label": "fire",
+      "ground_truth_int": 1,
+      "challenge_type": "true_positive_baseline",
+      "description": "Active crown and surface wildfire blazes with obvious flame illumination"
+    },
+    "green_forests": {
+      "ground_truth_label": "no_fire",
+      "ground_truth_int": 0,
+      "challenge_type": "true_negative_baseline",
+      "description": "Standard lush green forest canopies and aerial views without smoke or fire"
+    },
+    "low_light": {
+      "ground_truth_label": "variable",
+      "challenge_type": "false_negative_susceptibility",
+      "description": "Nocturnal, dusk, or heavy overcast conditions challenging contrast and brightness sensitivity"
+    }
+  },
+  "samples": [
+    {
+      "category": "autumn_foliage",
+      "filename": "Belovezhskaya-Forest-Poland.webp",
+      "ground_truth": 0,
+      "label": "no_fire",
+      "source": "Wikimedia Commons / Polish State Forests - Bialowieza Primeval Forest autumn foliage",
+      "notes": "Classic challenge sample: warm golden and orange foliage known to trigger naive color heuristics."
+    },
+    {
+      "category": "green_forests",
+      "filename": "green-forest-2131948.webp",
+      "ground_truth": 0,
+      "label": "no_fire",
+      "source": "Pixabay / Free license - Green pine forest canopy",
+      "notes": "Standard green negative control."
+    },
+    {
+      "category": "green_forests",
+      "filename": "green-forest-aerial-view-photo.jpeg",
+      "ground_truth": 0,
+      "label": "no_fire",
+      "source": "Stock repository - Aerial drone capture of dense green woodlands",
+      "notes": "Standard aerial green negative control."
+    },
+    {
+      "category": "forest_fires",
+      "filename": "forest-fire-blaze-stockcake.webp",
+      "ground_truth": 1,
+      "label": "fire",
+      "source": "Stockcake / Public Domain - Forest fire blaze with active crown flame",
+      "notes": "High-intensity active wildfire control."
+    },
+    {
+      "category": "forest_fires",
+      "filename": "fire-fighters-at-forest-fire-c-quarrie-photography.tmb-479v.jpg",
+      "ground_truth": 1,
+      "label": "fire",
+      "source": "C. Quarrie Photography - Wildfire response scene with firefighters and fire line",
+      "notes": "Ground-level fire operation with smoke and flame."
+    }
+  ]
+}

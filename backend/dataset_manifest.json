@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-11-18T13:39:07.131912+00:00",
+  "dataset_root": "C:\\Users\\rohit\\Downloads\\FireWatch-AI-main\\FireWatch-AI-main\\dataset",
+  "classes": [
+    "no_fire",
+    "fire"
+  ],
+  "total_images": 12,
+  "class_counts": {
+    "fire": 5,
+    "no_fire": 7
+  },
+  "valid_images": [
+    {
+      "file": "no_fire\\Belovezhskaya-Forest-Poland.webp",
+      "class": "no_fire",
+      "label": 0,
+      "width": 532,
+      "height": 800,
+      "mode": "RGB",
+      "format": "WEBP",
+      "bytes": 156392,
+      "md5": "da6a8a2a32419f510874ad4a9486b7fb",
+      "dhash": "1000100011001000010000101100000100000111000001010100010111000000"
+    },
+    {
+      "file": "no_fire\\download (1).jpg",
+      "class": "no_fire",
+      "label": 0,
+      "width": 275,
+      "height": 183,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 11442,
+      "md5": "5c7e574361e6aaa5f7dec2c1b76faed2",
+      "dhash": "1111011011100110101000001010000110100100111001001110010010100000"
+    },
+    {
+      "file": "no_fire\\green-forest-2131948.webp",
+      "class": "no_fire",
+      "label": 0,
+      "width": 800,
+      "height": 536,
+      "mode": "RGB",
+      "format": "WEBP",
+      "bytes": 72852,
+      "md5": "4f5bb28bd706f94622fac0d1092d2359",
+      "dhash": "0011010011110100100111001001100110011011010101000101010011110010"
+    },
+    {
+      "file": "no_fire\\green-forest-aerial-view-photo.jpeg",
+      "class": "no_fire",
+      "label": 0,
+      "width": 558,
+      "height": 350,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 38029,
+      "md5": "eacf4990891e1eedb949ddf34148ccb3",
+      "dhash": "1110110011111000011010011110100010101000110011101100110010011010"
+    },
+    {
+      "file": "no_fire\\images (2).jpg",
+      "class": "no_fire",
+      "label": 0,
+      "width": 275,
+      "height": 183,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 12271,
+      "md5": "07f13309dc82d556afdb3fc49ef6f02e",
+      "dhash": "1101000011010000100100001011010001110100111101001100110011010100"
+    },
+    {
+      "file": "no_fire\\images (3).jpg",
+      "class": "no_fire",
+      "label": 0,
+      "width": 275,
+      "height": 183,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 13143,
+      "md5": "d4244580e01f200901d6b1dcc58d9b1a",
+      "dhash": "1110100111000101110011001110101001100001111000011000000010000000"
+    },
+    {
+      "file": "no_fire\\pexels-hikaique-775201.jpg",
+      "class": "no_fire",
+      "label": 0,
+      "width": 1999,
+      "height": 2998,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 1221254,
+      "md5": "69cea36129430f6f29888c086308de32",
+      "dhash": "1111001110111000001110000011001110110000101100101111000011110000"
+    },
+    {
+      "file": "fire\\download.jpg",
+      "class": "fire",
+      "label": 1,
+      "width": 316,
+      "height": 159,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 15917,
+      "md5": "cb4e3455ce4c829254b33a223ec5a658",
+      "dhash": "0111110001111100011100011110000011100100100011000100110111001101"
+    },
+    {
+      "file": "fire\\fire-fighters-at-forest-fire-c-quarrie-photography.tmb-479v.jpg",
+      "class": "fire",
+      "label": 1,
+      "width": 479,
+      "height": 351,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 64559,
+      "md5": "99d11a583960224085d648532c7c38d5",
+      "dhash": "1000000110000000100010001000010001011000010111000011010100110000"
+    },
+    {
+      "file": "fire\\forest-fire-blaze-stockcake.webp",
+      "class": "fire",
+      "label": 1,
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "format": "WEBP",
+      "bytes": 53158,
+      "md5": "ffc3c891b326569965deb8c19e8925af",
+      "dhash": "1000000010110000111000001101010011010000111100101101100111110000"
+    },
+    {
+      "file": "fire\\Forest-fire-trees-grasses.webp",
+      "class": "fire",
+      "label": 1,
+      "width": 1600,
+      "height": 1197,
+      "mode": "RGB",
+      "format": "WEBP",
+      "bytes": 398076,
+      "md5": "51209b56f2cc07cfa5232b47f199c896",
+      "dhash": "0001100000011010000010001100100001101100101011000001110011001111"
+    },
+    {
+      "file": "fire\\images (1).jpg",
+      "class": "fire",
+      "label": 1,
+      "width": 275,
+      "height": 183,
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 7841,
+      "md5": "e459bb3b177f70ab93f4f180446797b8",
+      "dhash": "1110000011101001111100101000011000000110011000111111010011000111"
+    }
+  ],
+  "corrupt_images": [],
+  "exact_duplicates": [],
+  "near_duplicates": []
+}
